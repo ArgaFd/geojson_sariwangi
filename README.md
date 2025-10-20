@@ -21,6 +21,56 @@ Setiap file GeoJSON memiliki struktur sebagai berikut:
 5. **`jl_bumi_sariwangi_1.geojson`** - Jalan Bumi Sariwangi I (Jalan Perumahan)
 6. **`jl_mekar_wangi.geojson`** - Jalan Mekar Wangi (Jalan Lokal)
 
+## Database Lokal (SQLite)
+
+### Setup Database
+```bash
+# Install dependencies
+npm install better-sqlite3 geojson
+
+# Setup database schema
+node setup-database.js
+
+# Load GeoJSON data into database
+node load-to-sqlite.js
+
+# Run query examples
+node query-examples.js
+```
+
+### Struktur Database
+Database SQLite (`sariwangi_roads.db`) memiliki dua tabel utama:
+
+#### Tabel `roads`:
+- `id`: Primary key
+- `nama`: Nama jalan
+- `nama_file`: Nama file GeoJSON
+- `tipe`: Tipe jalan (jalan_utama, jalan_cabang, jalan_lokal, jalan_perumahan)
+- `panjang_meter`: Perkiraan panjang jalan dalam meter
+- `jumlah_titik`: Jumlah titik koordinat
+
+#### Tabel `coordinates`:
+- `id`: Primary key
+- `road_id`: Foreign key ke tabel roads
+- `longitude`: Koordinat bujur
+- `latitude`: Koordinat lintang
+- `urutan`: Urutan titik dalam jalan
+
+### Query Examples
+```javascript
+// Get all roads
+SELECT nama, tipe, panjang_meter FROM roads;
+
+// Filter by road type
+SELECT * FROM roads WHERE tipe = 'jalan_lokal';
+
+// Get coordinates for specific road
+SELECT c.longitude, c.latitude
+FROM coordinates c
+JOIN roads r ON c.road_id = r.id
+WHERE r.nama = 'Jl. Sariwangi Selatan';
+```
+
 ## Cara Membuka File
 
 ### Menggunakan QGIS
