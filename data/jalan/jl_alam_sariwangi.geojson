@@ -1,0 +1,20 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Jl. Alam Sariwangi",
+        "kelurahan": "Kelurahan Sariwangi",
+        "tipe": "jalan_cabang"
+      },
+      "geometry": {
+        "coordinates": [
+          [107.56786487374382, -6.862357385169645],
+          [107.56869071578984, -6.861459898019646]
+        ],
+        "type": "LineString"
+      }
+    }
+  ]
+}

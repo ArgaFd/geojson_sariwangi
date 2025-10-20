@@ -1,0 +1,22 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Jl. H. Mukti",
+        "kelurahan": "Kelurahan Sariwangi",
+        "tipe": "jalan_lokal"
+      },
+      "geometry": {
+        "coordinates": [
+          [107.5673520221992, -6.860451842964977],
+          [107.56709115088739, -6.86085969884725],
+          [107.56693222928459, -6.861336026441876],
+          [107.5668122884519, -6.861520603255471]
+        ],
+        "type": "LineString"
+      }
+    }
+  ]
+}

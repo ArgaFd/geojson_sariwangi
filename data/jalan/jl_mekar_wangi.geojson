@@ -1,0 +1,20 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Jl. Mekar Wangi",
+        "kelurahan": "Kelurahan Sariwangi",
+        "tipe": "jalan_lokal"
+      },
+      "geometry": {
+        "coordinates": [
+          [107.57171406137019, -6.8643307171907395],
+          [107.5722404400114, -6.8633640186594675]
+        ],
+        "type": "LineString"
+      }
+    }
+  ]
+}

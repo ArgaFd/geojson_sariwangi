@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Jl. Bumi Sariwangi II",
+        "kelurahan": "Kelurahan Sariwangi",
+        "tipe": "jalan_perumahan"
+      },
+      "geometry": {
+        "coordinates": [
+          [107.56790811436304, -6.862511104628638],
+          [107.56754338592896, -6.8630743949546655],
+          [107.56718444683435, -6.8635744582566645]
+        ],
+        "type": "LineString"
+      }
+    }
+  ]
+}
